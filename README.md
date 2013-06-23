@@ -10,17 +10,17 @@ Each server type should have a "module." These modules should be of a standard t
 into a python class on startup. These modules will contain the information that the server manager needs in order 
 to check, start, stop, and manage a server. They should also point to any necessary dependencies.
 
-Priorities: 
-    * Status (player numbers, uptime, map)
-    * Start and Stop
-    * Restart
-    * Reconfigure
-    * Creation
-    * Deletion
+Priorities:   
+    * Status (player numbers, uptime, map)  
+    * Start and Stop  
+    * Restart  
+    * Reconfigure  
+    * Creation  
+    * Deletion  
 
-Game Type Priorities: 
-    * Minecraft
-    * NS2
+Game Type Priorities:  
+    * Minecraft  
+    * NS2  
     * Tremulous or UV
 
 ###Permissions
