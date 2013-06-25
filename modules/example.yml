@@ -1,9 +1,8 @@
 #Module Info
 
-
 #engine/game name
 name: Example Module
-#short game type, usually engine (mc for minecraft, ioq3 for ioquake3 (tremulous))
+#short game type, usually engine (ioq3 for ioquake3 (tremulous))
 #this should also be the class name
 shortname: em
 version: 0.1
@@ -11,11 +10,12 @@ author: Billy Rhoades
 
 #base information
 #
-#config:
+config:
     #- template: ez                         #essentially copies another
                                             #module, uses hooks to modify
    
-    #- dir: "/home/apps/ez-1                #specifies a custom dir
+    #- dir: "/home/apps/ez-1"               #specifies a custom dir
+    -
 
 #command names
 # this allows you to specify names of functions in your class    
@@ -30,9 +30,11 @@ commands:
 # ["name",type]
 configure:
     - name: ["Server Name",string]
-    - players: ["Number of Players", integer]
-    - mods: ["mods", stringarray]
-    - 
+    - players: ["Number of Players",int]
+    - mods: ["Game Mods",stringarray]
+    - port: ["Port",int]
+    - rconport: ["rcon Port",int]
+    - customargs: ["Custom Arguments",string]
     
 #Server Hook Toggles
 # Abscence will disable a hook
@@ -47,12 +49,11 @@ configure:
 # stop
 # start
 
-
 hooks:
-    pre:
-        - restart 
-        - stop
-        #- start
+    #pre:
+    #    - restart 
+    #    - stop
+    #    - start
     #post:
     #    - restart
     #    - stop
