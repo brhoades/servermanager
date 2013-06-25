@@ -1,29 +1,60 @@
 #Module Info
 
-#game name
+
+#engine/game name
 name: Example Module
-#short game type (mc for minecraft, trem for tremulous)
+#short game type, usually engine (mc for minecraft, ioq3 for ioquake3 (tremulous))
 #this should also be the class name
 shortname: em
 version: 0.1
 author: Billy Rhoades
 
+#base information
+#
+#config:
+    #- template: ez                         #essentially copies another
+                                            #module, uses hooks to modify
+   
+    #- dir: "/home/apps/ez-1                #specifies a custom dir
+
+#command names
+# this allows you to specify names of functions in your class    
+commands:
+    - start: "start"
+    - restart: "restart"
+    - stop: "stop"
+    - configure: "configure"
+
+#configure params
+# order specific to the configure function
+# ["name",type]
+configure:
+    - name: ["Server Name",string]
+    - players: ["Number of Players", integer]
+    - mods: ["mods", stringarray]
+    - 
+    
 #Server Hook Toggles
-#Minus in front of a option turns it off
-#like "- -toggle"
+# Abscence will disable a hook
 #
-#These are used for games that require a special command be ran before or after something
+# These are used for games that require a special function be ran before 
+# or after something. Typically these are functions that are from 
+# a template.
 #
-#hooks
+# hooks
 #
-#restart
-#stop
-#start
+# restart
+# stop
+# start
 
 
 hooks:
     pre:
         - restart 
         - stop
+        #- start
     #post:
+    #    - restart
+    #    - stop
+    #    - start
 
