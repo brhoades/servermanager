@@ -1,0 +1,29 @@
+#Module Info
+
+#game name
+name: Example Module
+#short game type (mc for minecraft, trem for tremulous)
+#this should also be the class name
+shortname: em
+version: 0.1
+author: Billy Rhoades
+
+#Server Hook Toggles
+#Minus in front of a option turns it off
+#like "- -toggle"
+#
+#These are used for games that require a special command be ran before or after something
+#
+#hooks
+#
+#restart
+#stop
+#start
+
+
+hooks:
+    pre:
+        - restart 
+        - stop
+    #post:
+
