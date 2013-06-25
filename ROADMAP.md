@@ -38,3 +38,6 @@ will be written in (json, yaml, xml). A web front end will be served through dja
 will be our backend for user management and permission checking. MySQL calls will be made through python whenever
 possible. All python code written should follow PEP 8 guidelines. No tabs are allowed and any modules should 
 follow similar formatting when at all possible.
+
+###Future
+Log rotation, management, and reading
